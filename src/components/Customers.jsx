@@ -1,0 +1,120 @@
+import React from 'react'
+import { review, slider } from '../utils/helper'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+function Customers() {
+    const settings = {
+        dots: false,
+        speed: 500,
+        slidesToShow: 3.75,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 3.25,
+                }
+            },
+            {
+                breakpoint: 1235,
+                settings: {
+                    slidesToShow: 2.75,
+                }
+            },
+            {
+                breakpoint: 1065,
+                settings: {
+                    slidesToShow: 2.25,
+                }
+            },
+            {
+                breakpoint: 870,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1.5,
+                }
+            },
+            {
+                breakpoint: 572,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
+    };
+    return (
+        <div className='mb-[84px] overflow-hidden'>
+            <div className="mx-w-[1140px] mx-auto px-3">
+                <h2 className='font-jakarta font-semibold text-[56px] text-center mb-5 '>
+                    What Our Customers Say
+                </h2>
+
+                <p className='font-jakarta font-normal text-b=[18px] text-center max-w-[641px] mb-8 mx-auto '>
+                    Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade
+                </p>
+
+                <div className='flex max-w-[482px] justify-between mx-auto '>
+                    {review.map((items, index) => (
+                        <div key={index} className='flex gap-[10.67px] pt-[8.33px] pb-[6px] pl-4 pr-[45.5px] bg-white rounded-[16px] items-center border border-[#DCDCDC] '>
+                            <a href="">
+                                <img src={items.icon} alt="google" className='size-10' />
+                            </a>
+                            <div>
+                                <p className='font-manrope font-normal text-[12px] leading-[160%] '>
+                                    {items.name}
+                                </p>
+
+                                <div className='flex items-center'>
+                                    <p className='font-manrope font-normal text-[20px] leading-[160%] '>
+                                        {items.rating}
+                                    </p>
+
+                                    <img src={items.star} alt="stars" className='max-w[83.55px] w-full ' />
+                                </div>
+
+                                <p className='font-manrope font-normal text-[12px] leading-[160%] '>
+                                    {items.reviews}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <Slider {...settings}>
+                {slider.map((items, index) => (
+                    <div key={index} className='max-w-[365px] p-6 rounded-[24px] shadow-2 my-[56px] '>
+                        <div className='flex items-center gap-2 '>
+                            <img src={items.profile} alt="profile" />
+
+                            <div>
+                                <p className='font-manrope font-semibold text-base leading-[160%] '>
+                                    {items.name}
+                                </p>
+
+                                <p className='font-manrope font-normal text-[14px] leading-[160%] '>
+                                    {items.job}
+                                </p>
+                            </div>
+                        </div>
+
+                        <img src={items.stars} alt="rating" className='w-[120px] h-6 my-4 ' />
+
+                        <p className='font-manrope font-normal text-base leading-[160%] '>
+                            "{items.comment}"
+                        </p>
+                    </div>
+                ))}
+            </Slider>
+        </div>
+    )
+}
+
+export default Customers

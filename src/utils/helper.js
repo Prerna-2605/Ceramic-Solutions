@@ -13,6 +13,11 @@ import arrow from '../assets/svg/arrow.svg'
 
 import { CALL, STAR, THUMB } from './Icons'
 
+import profile1 from '../assets/svg/profile1.svg'
+import profile2 from '../assets/svg/profile2.svg'
+import profile3 from '../assets/svg/profile3.svg'
+import profile4 from '../assets/svg/profile4.svg'
+
 export const nav = [
     {
         name: 'home',
@@ -113,7 +118,7 @@ export const whyUs = [
     {
         icon: STAR,
         heading: "High Quality Materials",
-        content:"Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird.",
+        content: "Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird.",
     },
     {
         icon: THUMB,
@@ -125,4 +130,35 @@ export const whyUs = [
         heading: "24/7 Support",
         content: "Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird.",
     },
+];
+
+export const slider = [
+    {
+        profile: profile1,
+        name: "Mark T.",
+        job: "Fitness enthusiast",
+        stars:stars,
+        comment: "As a fitness enthusiast, I was skeptical about resistance bands at first.But after trying these, I'm a believer. The quality is top-notch, and they've become an integral part of my workout routine.I can't believe how versatile they are.",
+    },
+    {
+        profile: profile2,
+        name: "Mark T.",
+        job: "Fitness enthusiast",
+        stars: stars,
+        comment: "As a fitness enthusiast, I was skeptical about resistance bands at first.But after trying these, I'm a believer. The quality is top-notch, and they've become an integral part of my workout routine.I can't believe how versatile they are.",
+    },
+    {
+        profile: profile3,
+        name: "Mark T.",
+        job: "Fitness enthusiast",
+        stars: stars,
+        comment: "As a fitness enthusiast, I was skeptical about resistance bands at first.But after trying these, I'm a believer. The quality is top-notch, and they've become an integral part of my workout routine.I can't believe how versatile they are.",
+    },
+    {
+        profile: profile4,
+        name: "Mark T.",
+        job: "Fitness enthusiast",
+        stars: stars,
+        comment: "As a fitness enthusiast, I was skeptical about resistance bands at first.But after trying these, I'm a believer. The quality is top-notch, and they've become an integral part of my workout routine.I can't believe how versatile they are.",
+    }
 ]
