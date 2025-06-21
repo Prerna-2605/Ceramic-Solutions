@@ -4,7 +4,7 @@ import { whatWeDo } from '../utils/helper'
 function WhatWeDo() {
     return (
         <div className='mb-[140px] '>
-            <div className='max-w-[1140px] mx-auto px-3 '>
+            <div className='max-w-[1140px] mx-auto -px-3 '>
                 <h2 className='font-jakarta font-semibold text-[56px] text-center mb-[56px] '>
                     What We Do
                 </h2>

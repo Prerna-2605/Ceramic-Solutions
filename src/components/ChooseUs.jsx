@@ -6,7 +6,7 @@ import Button from './common/Button'
 function ChooseUs() {
     return (
         <div className='bg-[#FFEBEB] mb-[140px] py-[100px] '>
-            <div className="max-w-[1140px] mx-auto px-3">
+            <div className="max-w-[1140px] mx-auto -px-3">
                 <div className="flex flex-wrap items-center">
                     <div className="w-1/2">
                         <h2 className='font-jakarta font-semibold text-[56px] mb-5 '>

@@ -4,6 +4,7 @@ import Header from './components/Header'
 import WhatWeDo from './components/WhatWeDo'
 import ChooseUs from './components/ChooseUs'
 import Customers from './components/Customers'
+import HowItWorks from './components/HowItWorks'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <WhatWeDo />
       <ChooseUs />
       <Customers />
+      <HowItWorks />
     </>
   )
 }

@@ -51,7 +51,7 @@ function Customers() {
     };
     return (
         <div className='mb-[84px] overflow-hidden'>
-            <div className="mx-w-[1140px] mx-auto px-3">
+            <div className="mx-w-[1140px] mx-auto -px-3">
                 <h2 className='font-jakarta font-semibold text-[56px] text-center mb-5 '>
                     What Our Customers Say
                 </h2>

@@ -11,7 +11,7 @@ import ada from '../assets/png/ada-shower.png'
 import fireplace from '../assets/png/fireplace-tiling.png'
 import arrow from '../assets/svg/arrow.svg'
 
-import { CALL, STAR, THUMB } from './Icons'
+import { CALL, STAR, THUMB, TICK } from './Icons'
 
 import profile1 from '../assets/svg/profile1.svg'
 import profile2 from '../assets/svg/profile2.svg'
@@ -137,7 +137,7 @@ export const slider = [
         profile: profile1,
         name: "Mark T.",
         job: "Fitness enthusiast",
-        stars:stars,
+        stars: stars,
         comment: "As a fitness enthusiast, I was skeptical about resistance bands at first.But after trying these, I'm a believer. The quality is top-notch, and they've become an integral part of my workout routine.I can't believe how versatile they are.",
     },
     {
@@ -160,5 +160,23 @@ export const slider = [
         job: "Fitness enthusiast",
         stars: stars,
         comment: "As a fitness enthusiast, I was skeptical about resistance bands at first.But after trying these, I'm a believer. The quality is top-notch, and they've become an integral part of my workout routine.I can't believe how versatile they are.",
+    }
+];
+
+export const howItWorks = [
+    {
+        icon: TICK,
+        heading: "Contact us",
+        content:"Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+    },
+    {
+        icon: TICK,
+        heading: "Get a Qoute",
+        content: "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+    },
+    {
+        icon: TICK,
+        heading: "Get your Work Done",
+        content: "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
     }
 ]

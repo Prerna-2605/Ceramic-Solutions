@@ -10,8 +10,8 @@ import award from '../assets/png/award.png'
 
 function Header() {
     return (
-        <div className='bg-center bg-cover bg-no-repeat pt-[180px] pb-6 px-3 mb-[174px] ' style={{ backgroundImage: `url(${bgimg})` }}>
-            <nav className='fixed top-6 w-full'>
+        <div className='bg-center bg-cover bg-no-repeat pt-[180px] pb-6 mb-[174px] ' style={{ backgroundImage: `url(${bgimg})` }}>
+            <nav className='fixed top-6 w-full z-20'>
                 <div className="max-w-[1140px] mx-auto p-4 bg-white rounded-[24px] flex justify-between items-center ">
                     <a href="">
                         <img src={logo} alt="logo" />
@@ -20,7 +20,7 @@ function Header() {
                     <ul className='flex gap-7'>
                         {nav.map((items, index) => (
                             <li key={index}>
-                                <a href={items.link} className='capitalize font-normal text-base font-jakarta'>
+                                <a href={items.link} className='capitalize font-normal text-base font-jakarta whitespace-nowrap'>
                                     {items.name}
                                 </a>
                             </li>
@@ -41,7 +41,7 @@ function Header() {
                 </div>
             </nav>
 
-            <div className="max-w-[1140px] mx-auto">
+            <div className="max-w-[1140px] mx-auto -px-3">
                 <h1 className='font-semibold text-[64px] max-w-[830px] text-white mb-5 font-jakarta'>
                     Transform Your Space with Precision and Quality:
                     Get a Free Quote Today!
