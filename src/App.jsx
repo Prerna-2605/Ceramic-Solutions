@@ -6,6 +6,7 @@ import ChooseUs from './components/ChooseUs'
 import Customers from './components/Customers'
 import HowItWorks from './components/HowItWorks'
 import GetInTouch from './components/GetInTouch'
+import Blog from './components/Blog'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Customers />
       <HowItWorks />
       <GetInTouch />
+      <Blog/>
     </>
   )
 }

@@ -18,6 +18,8 @@ import profile2 from '../assets/svg/profile2.svg'
 import profile3 from '../assets/svg/profile3.svg'
 import profile4 from '../assets/svg/profile4.svg'
 
+import card from '../assets/png/card.png'
+
 export const nav = [
     {
         name: 'home',
@@ -167,7 +169,7 @@ export const howItWorks = [
     {
         icon: TICK,
         heading: "Contact us",
-        content:"Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+        content: "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
     },
     {
         icon: TICK,
@@ -178,5 +180,26 @@ export const howItWorks = [
         icon: TICK,
         heading: "Get your Work Done",
         content: "Lörem ipsum deligen vuprer diar faktigt på dehädiska att sara. Persion. Repp löng blippbetalning. Megaliga fadat om än dening",
+    }
+];
+
+export const blog = [
+    {
+        image: card,
+        content: "Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga.",
+        more: "Learn more",
+        arrow:arrow,
+    },
+    {
+        image: card,
+        content: "Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga.",
+        more: "Learn more",
+        arrow:arrow,
+    },
+    {
+        image: card,
+        content: "Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga.",
+        more: "Learn more",
+        arrow:arrow,
     }
 ]
