@@ -5,6 +5,7 @@ import WhatWeDo from './components/WhatWeDo'
 import ChooseUs from './components/ChooseUs'
 import Customers from './components/Customers'
 import HowItWorks from './components/HowItWorks'
+import GetInTouch from './components/GetInTouch'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <ChooseUs />
       <Customers />
       <HowItWorks />
+      <GetInTouch />
     </>
   )
 }

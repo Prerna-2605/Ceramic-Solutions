@@ -5,10 +5,10 @@ import Button from './common/Button'
 
 function HowItWorks() {
     return (
-        <div>
+        <div className='mb-[140px] '>
             <div className="max-w-[1140px] mx-auto -px-3">
                 <div className="flex flex-wrap justify-between">
-                    <div className="w-[40%] px-3">
+                    <div className="w-[44%] px-3">
                         <img src={section5img} alt="image" className='w-full' />
                     </div>
 
@@ -40,11 +40,11 @@ function HowItWorks() {
                         </div>
 
                         <div className='flex gap-6 '>
-                            <Button className={`bg-[#FF0000] py-5 px-8 `}>
-                                Get a Quote
+                            <Button className={`bg-[#FF0000] py-4 px-8 `}>
+                                get a quote
                             </Button>
-                            <Button className={`border border-[#FF0000] py-5 px-8 !text-[#FF0000] `}>
-                                View Tile Visualizer
+                            <Button className={`border border-[#FF0000] py-4 px-8 !text-[#FF0000] `}>
+                                view tile visualizer
                             </Button>
                         </div>
                     </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Button({ className, children }) {
     return (
-        <button className={`${className} rounded-[56px] font-jakarta font-bold text-[18px] text-white cursor-pointer`}>
+        <button className={`${className} capitalize rounded-[56px] font-jakarta font-bold text-[18px] text-white cursor-pointer`}>
             {children}
         </button>
     )

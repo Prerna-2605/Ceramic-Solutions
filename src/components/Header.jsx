@@ -51,7 +51,7 @@ function Header() {
                     Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade nyheter eurosamma sol: teroktig,
                 </p>
 
-                <Button className={'py-5 px-8 bg-[#FF0000] capitalize font-bold text-[18px] text-white rounded-[56px] cursor-pointer mb-[72px] font-jakarta '}>
+                <Button className={'py-5 px-8 bg-[#FF0000] font-bold text-[18px] text-white rounded-[56px] cursor-pointer mb-[72px] font-jakarta '}>
                     get a quote
                 </Button>
 
