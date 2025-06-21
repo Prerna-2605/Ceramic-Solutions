@@ -10,7 +10,7 @@ import award from '../assets/png/award.png'
 
 function Header() {
     return (
-        <div className='bg-center bg-cover bg-no-repeat pt-[180px] pb-6 ' style={{ backgroundImage: `url(${bgimg})` }}>
+        <div className='bg-center bg-cover bg-no-repeat pt-[180px] pb-6 px-3 mb-[174px] ' style={{ backgroundImage: `url(${bgimg})` }}>
             <nav className='fixed top-6 w-full'>
                 <div className="max-w-[1140px] mx-auto p-4 bg-white rounded-[24px] flex justify-between items-center ">
                     <a href="">
