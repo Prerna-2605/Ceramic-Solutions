@@ -11,6 +11,8 @@ import ada from '../assets/png/ada-shower.png'
 import fireplace from '../assets/png/fireplace-tiling.png'
 import arrow from '../assets/svg/arrow.svg'
 
+import { CALL, STAR, THUMB } from './Icons'
+
 export const nav = [
     {
         name: 'home',
@@ -106,3 +108,21 @@ export const whatWeDo = [
         redarrow: arrow,
     }
 ];
+
+export const whyUs = [
+    {
+        icon: STAR,
+        heading: "High Quality Materials",
+        content:"Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird.",
+    },
+    {
+        icon: THUMB,
+        heading: "Durability with Warranty",
+        content: "Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird.",
+    },
+    {
+        icon: CALL,
+        heading: "24/7 Support",
+        content: "Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird.",
+    },
+]

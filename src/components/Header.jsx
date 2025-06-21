@@ -28,7 +28,7 @@ function Header() {
                     </ul>
 
                     <div className='flex gap-5 items-center'>
-                        <Button className={'bg-[#FF0000] font-bold text-base flex text-white gap-[10px] py-[14px] px-5 rounded-[56px] cursor-pointer font-jakarta '}>
+                        <Button className={'bg-[#FF0000] gap-[10px] py-[14px] px-5 '}>
                             <PHONE />
                             (865) 621-1717
                         </Button>
