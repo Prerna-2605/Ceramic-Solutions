@@ -20,6 +20,11 @@ import profile4 from '../assets/svg/profile4.svg'
 
 import card from '../assets/png/card.png'
 
+import facebook from '../assets/svg/facebook.svg'
+import insta from '../assets/svg/insta.svg'
+import x from '../assets/svg/x.svg'
+import linkedin from '../assets/svg/linkedin.svg'
+
 export const nav = [
     {
         name: 'home',
@@ -248,3 +253,37 @@ export const services = [
 ];
 
 export const repeatedServices = Array(6).fill(services).flat();
+
+export const icons = [
+    {
+        icon: facebook,
+        link: "https://www.facebook.com/",
+    },
+    {
+        icon: insta,
+        link: "https://www.instagram.com/",
+    },
+    {
+        icon: x,
+        link: "https://x.com/?lang=en",
+    },
+    {
+        icon: linkedin,
+        link: "https://in.linkedin.com/",
+    },
+];
+
+export const footerLinks = [
+    {
+        title: "Links",
+        links: ["Home", "About Us", "Services", "Showcase"],
+    },
+    {
+        title: "Legal",
+        links: ["Terms Of Use", "Privacy Policy", "Cookie Policy"],
+    },
+    {
+        title: "Product",
+        links: ["Take Tour", "Live Chat", "Reviews"],
+    },
+];  

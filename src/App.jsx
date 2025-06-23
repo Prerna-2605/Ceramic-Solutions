@@ -9,6 +9,7 @@ import GetInTouch from './components/GetInTouch'
 import Blog from './components/Blog'
 import Questions from './components/Questions'
 import Services from './components/Services'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
       <GetInTouch />
       <Blog />
       <Questions />
-      <Services/>
+      <Services />
+      <Footer/>
     </>
   )
 }

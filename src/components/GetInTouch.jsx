@@ -6,7 +6,7 @@ function GetInTouch() {
     return (
         <div className='mb-[140px] '>
             <div className='max-w-[1140px] mx-auto px-3'>
-                <div className='relative bg-center bg-cover bg-no-repeat rounded-3xl -z-2 after:content-[""] after:absolute after:rounded-3xl after:top-0 after:-z-1 after:w-full after:h-full after:bg-[#FF0000BF] py-[64px] ' style={{ backgroundImage: `url(${bgimg})` }}>
+                <div className='relative bg-center bg-cover bg-no-repeat rounded-3xl -z-2 after:content-[""] after:absolute after:rounded-3xl after:top-0 after:-z-1 after:w-full after:h-full after:bg-[#FF0000BF] py-[64px] flex flex-col items-center ' style={{ backgroundImage: `url(${bgimg})` }}>
                     <h2 className='font-jakarta font-semibold text-[56px] leading-[120%] text-white text-center mb-5  '>
                         Interested?
                         <br />
@@ -17,11 +17,9 @@ function GetInTouch() {
                         Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt.
                     </p>
 
-                    <div className='text-center'>
-                        <Button className={`bg-white py-5 px-8 !text-[#FF0000] cursor-pointer `}>
-                            get a quote
-                        </Button>
-                    </div>
+                    <Button className={`bg-white py-5 px-8 !text-[#FF0000] cursor-pointer `}>
+                        get a quote
+                    </Button>
                 </div>
             </div>
         </div>
