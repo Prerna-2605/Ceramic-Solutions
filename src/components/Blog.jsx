@@ -4,7 +4,7 @@ import { blog } from '../utils/helper'
 function Blog() {
     return (
         <div className='mb-[84px] '>
-            <div className="max-w-[1140px] mx-auto -px-3">
+            <div className="max-w-[1140px] mx-auto px-3">
                 <h2 className='font-jakarta font-semibold text-[56px] leading-[100%] text-center mb-5 '>
                     Our Blog
                 </h2>

@@ -5,7 +5,7 @@ function Questions() {
     const [isOpen, setIsOpen] = useState(null);
     return (
         <div className='mb-[134px] '>
-            <div className="max-w-[1140px] mx-auto -px-3">
+            <div className="max-w-[1140px] mx-auto px-3">
                 <h2 className='font-jakarta font-semibold text-[56px] leading-[100%] text-center mb-5 '>
                     Frequently Asked Questions
                 </h2>

@@ -41,7 +41,7 @@ function Header() {
                 </div>
             </nav>
 
-            <div className="max-w-[1140px] mx-auto -px-3">
+            <div className="max-w-[1140px] mx-auto px-3 ">
                 <h1 className='font-semibold text-[64px] max-w-[830px] text-white mb-5 font-jakarta'>
                     Transform Your Space with Precision and Quality:
                     Get a Free Quote Today!

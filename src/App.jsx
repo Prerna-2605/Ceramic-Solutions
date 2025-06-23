@@ -8,6 +8,7 @@ import HowItWorks from './components/HowItWorks'
 import GetInTouch from './components/GetInTouch'
 import Blog from './components/Blog'
 import Questions from './components/Questions'
+import Services from './components/Services'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <GetInTouch />
       <Blog />
       <Questions />
+      <Services/>
     </>
   )
 }

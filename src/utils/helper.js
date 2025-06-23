@@ -11,7 +11,7 @@ import ada from '../assets/png/ada-shower.png'
 import fireplace from '../assets/png/fireplace-tiling.png'
 import arrow from '../assets/svg/arrow.svg'
 
-import { ARROW, CALL, STAR, THUMB, TICK } from './Icons'
+import { ARROW, CALL, LOCATION, STAR, THUMB, TICK } from './Icons'
 
 import profile1 from '../assets/svg/profile1.svg'
 import profile2 from '../assets/svg/profile2.svg'
@@ -231,3 +231,20 @@ export const quest = [
         arrow: ARROW,
     },
 ];
+
+export const services = [
+    {
+        location: LOCATION,
+        name: "Knoxville",
+    },
+    {
+        location: LOCATION,
+        name: "Sevierville",
+    },
+    {
+        location: LOCATION,
+        name: "Maynardville",
+    },
+];
+
+export const repeatedServices = Array(6).fill(services).flat();

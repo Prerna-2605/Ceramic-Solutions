@@ -6,7 +6,7 @@ import Button from './common/Button'
 function HowItWorks() {
     return (
         <div className='mb-[140px] '>
-            <div className="max-w-[1140px] mx-auto -px-3">
+            <div className="max-w-[1140px] mx-auto px-3">
                 <div className="flex flex-wrap justify-between">
                     <div className="w-[44%] px-3">
                         <img src={section5img} alt="image" className='w-full' />
