@@ -11,7 +11,7 @@ import ada from '../assets/png/ada-shower.png'
 import fireplace from '../assets/png/fireplace-tiling.png'
 import arrow from '../assets/svg/arrow.svg'
 
-import { CALL, STAR, THUMB, TICK } from './Icons'
+import { ARROW, CALL, STAR, THUMB, TICK } from './Icons'
 
 import profile1 from '../assets/svg/profile1.svg'
 import profile2 from '../assets/svg/profile2.svg'
@@ -188,18 +188,46 @@ export const blog = [
         image: card,
         content: "Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga.",
         more: "Learn more",
-        arrow:arrow,
+        arrow: arrow,
     },
     {
         image: card,
         content: "Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga.",
         more: "Learn more",
-        arrow:arrow,
+        arrow: arrow,
     },
     {
         image: card,
         content: "Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga.",
         more: "Learn more",
-        arrow:arrow,
+        arrow: arrow,
     }
-]
+];
+
+export const quest = [
+    {
+        ques: "Lörem ipsum koda astrobel: sutaveligen.",
+        ans: "Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade",
+        arrow: ARROW,
+    },
+    {
+        ques: "Rodod bänera viliga",
+        ans: "Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade",
+        arrow: ARROW,
+    },
+    {
+        ques: "Pregigt primasofi dede facebooka: förutom",
+        ans: "Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade",
+        arrow: ARROW,
+    },
+    {
+        ques: "Ipsum koda astrobel: sutaveligen. Rodod bänera viliga.",
+        ans: "Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade",
+        arrow: ARROW,
+    },
+    {
+        ques: "Rodod bänera viliga. Pregigt primasofi dede facebooka",
+        ans: "Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade",
+        arrow: ARROW,
+    },
+];

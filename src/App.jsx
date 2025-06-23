@@ -7,6 +7,7 @@ import Customers from './components/Customers'
 import HowItWorks from './components/HowItWorks'
 import GetInTouch from './components/GetInTouch'
 import Blog from './components/Blog'
+import Questions from './components/Questions'
 
 function App() {
 
@@ -18,7 +19,8 @@ function App() {
       <Customers />
       <HowItWorks />
       <GetInTouch />
-      <Blog/>
+      <Blog />
+      <Questions />
     </>
   )
 }
