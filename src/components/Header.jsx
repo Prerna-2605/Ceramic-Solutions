@@ -1,63 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
 import bgimg from '../assets/png/section1-bg.png'
-import logo from '../assets/svg/logo.svg'
-import { nav } from '../utils/helper'
 import Button from './common/Button'
-import { PHONE } from '../utils/Icons'
 import { review } from '../utils/helper'
 import tiles from '../assets/png/tiles.png'
 import award from '../assets/png/award.png'
+import { motion, useScroll } from "framer-motion";
 
 function Header() {
+
     return (
-        <div className='bg-center bg-cover bg-no-repeat pt-[180px] pb-6 mb-[174px] ' style={{ backgroundImage: `url(${bgimg})` }}>
-            <nav className='fixed top-6 w-full z-20'>
-                <div className="max-w-[1140px] mx-auto p-4 bg-white rounded-[24px] flex justify-between items-center ">
-                    <a href="">
-                        <img src={logo} alt="logo" />
-                    </a>
-
-                    <ul className='flex gap-7'>
-                        {nav.map((items, index) => (
-                            <li key={index}>
-                                <a href={items.link} className='capitalize font-normal text-base font-jakarta whitespace-nowrap'>
-                                    {items.name}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-
-                    <div className='flex gap-5 items-center'>
-                        <Button className={'bg-[#FF0000] gap-[10px] py-[14px] px-5 flex '}>
-                            <PHONE />
-                            (865) 621-1717
-                        </Button>
-                        {/* <Button className={'flex flex-col justify-between w-[35px] h-[30px] cursor-pointer '}>
-                            <span className={`w-full h-1 bg-[#FF0000] rounded-[50px] `}></span>
-                            <span className={`w-full h-1 bg-[#FF0000] rounded-[50px] `}></span>
-                            <span className={`w-full h-1 bg-[#FF0000] rounded-[50px] `}></span>
-                        </Button> */}
-                    </div>
-                </div>
-            </nav>
+        <div className='bg-center bg-cover bg-no-repeat pt-[180px] pb-6 mb-[174px] overflow-hidden ' style={{ backgroundImage: `url(${bgimg})` }}>
 
             <div className="max-w-[1140px] mx-auto px-3 ">
-                <h1 className='font-semibold text-[64px] max-w-[830px] text-white mb-5 font-jakarta'>
+                <motion.h1
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }} // triggers only once when 50% visible
+                    transition={{ duration: 0.6, ease: "easeOut" }} className='font-semibold text-[64px] max-w-[830px] text-white mb-5 font-jakarta'>
                     Transform Your Space with Precision and Quality:
                     Get a Free Quote Today!
-                </h1>
+                </motion.h1>
 
-                <p className='font-normal text-[18px] text-white mb-9 max-w-[742px] leading-[160%] font-jakarta '>
+                <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{ delay: 0.2, duration: 0.6 }} className='font-normal text-[18px] text-white mb-9 max-w-[742px] leading-[160%] font-jakarta '>
                     Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade nyheter eurosamma sol: teroktig,
-                </p>
+                </motion.p>
 
-                <Button className={'py-5 px-8 bg-[#FF0000] font-bold text-[18px] text-white rounded-[56px] cursor-pointer mb-[72px] font-jakarta '}>
-                    get a quote
-                </Button>
+                <motion.div
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    transition={{ duration: 0.5, type: "spring", stiffness: 100 }}>
+                    <Button className={'py-5 px-8 bg-[#FF0000] font-bold text-[18px] text-white rounded-[56px] cursor-pointer mb-[72px] font-jakarta '}>
+                        get a quote
+                    </Button>
+                </motion.div>
 
-                <div className='flex max-w-[690px] justify-between '>
+                <motion.div
+                    className='flex max-w-[690px] justify-between'
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.4 }}
+                    variants={{
+                        visible: {
+                            transition: { staggerChildren: 0.2 }
+                        }
+                    }}>
                     {review.map((items, index) => (
-                        <div key={index} className='flex gap-[10.67px] pt-[8.33px] pb-[6px] pl-4 pr-[45.5px] bg-white rounded-[16px] items-center '>
+                        <motion.div
+                            key={index}
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                            transition={{ duration: 0.5 }} className='flex gap-[10.67px] pt-[8.33px] pb-[6px] pl-4 pr-[45.5px] bg-white rounded-[16px] items-center '>
                             <a href="">
                                 <img src={items.icon} alt="google" className='size-10' />
                             </a>
@@ -78,13 +77,21 @@ function Header() {
                                     {items.reviews}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
 
-                    <img src={tiles} alt="img" />
+                    <motion.img
+                        initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }} src={tiles} alt="img" />
 
-                    <img src={award} alt="img" />
-                </div>
+                    <motion.img
+                        initial={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }} src={award} alt="img" />
+                </motion.div>
             </div>
         </div>
     )

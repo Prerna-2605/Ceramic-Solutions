@@ -1,21 +1,45 @@
 import React from 'react'
 import { blog } from '../utils/helper'
+import { motion } from 'framer-motion'
 
 function Blog() {
     return (
         <div className='mb-[84px] '>
             <div className="max-w-[1140px] mx-auto px-3">
-                <h2 className='font-jakarta font-semibold text-[56px] leading-[100%] text-center mb-5 '>
+                <motion.h2
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }} className='font-jakarta font-semibold text-[56px] leading-[100%] text-center mb-5 '>
                     Our Blog
-                </h2>
+                </motion.h2>
 
-                <p className='font-jakarta font-normal text-[18px] text-center max-w-[592px] mx-auto '>
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true }} className='font-jakarta font-normal text-[18px] text-center max-w-[592px] mx-auto '>
                     Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade
-                </p>
+                </motion.p>
 
-                <div className='grid grid-cols-3 gap-6 py-[56px]'>
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={{
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.2,
+                            },
+                        },
+                    }} className='grid grid-cols-3 gap-6 py-[56px]'>
                     {blog.map((items, index) => (
-                        <div key={index} className='p-6 rounded-3xl shadow '>
+                        <motion.div
+                            variants={{
+                                hidden: { opacity: 0, scale: 0.9 },
+                                visible: { opacity: 1, scale: 1 },
+                            }}
+                            transition={{ duration: 0.5, ease: "easeOut" }} key={index} className='p-6 rounded-3xl shadow '>
                             <img src={items.image} alt="image" className='w-full mb-6' />
 
                             <h3 className='font-jakarta font-semibold text-2xl mb-3 '>
@@ -26,9 +50,9 @@ function Blog() {
                                 {items.more}
                                 <img src={items.arrow} alt="img" />
                             </a>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
     )

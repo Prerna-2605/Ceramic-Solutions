@@ -10,11 +10,13 @@ import Blog from './components/Blog'
 import Questions from './components/Questions'
 import Services from './components/Services'
 import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 
 function App() {
 
   return (
     <>
+      <Navbar/>
       <Header />
       <WhatWeDo />
       <ChooseUs />

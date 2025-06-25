@@ -3,14 +3,19 @@ import logo from '../assets/svg/logo2.svg'
 import { MAIL, REDPHONE } from '../utils/Icons'
 import { footerLinks, icons } from '../utils/helper'
 import Button from './common/Button'
+import { motion } from 'framer-motion'
 
 function Footer() {
     const year = new Date().getFullYear();
     return (
         <div>
             <div className="max-w-[1140px] mx-auto px-3">
-                <div className='flex justify-between mb-[45px] '>
-                    <div>
+                <div className='flex justify-between gap-15 mb-[45px] '>
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}>
                         <a href="">
                             <img src={logo} alt="logo" />
                         </a>
@@ -33,14 +38,18 @@ function Footer() {
 
                         <div className='flex gap-2 '>
                             {icons.map((items, index) => (
-                                <a href={items.link} target='_blank' key={index} className='hover:-translate-y-1 transition-[translate] duration-150 '>
+                                <a href={items.link} target='_blank' key={index} className='min-[768px]:hover:-translate-y-1 transition-[translate] duration-150 ease-in-out '>
                                     <img src={items.icon} alt="" />
                                 </a>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="max-w-[832px] justify-between flex w-full">
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true }} className="max-w-[832px] justify-between flex w-full">
                         {footerLinks.map((items, index) => (
                             <div key={index}>
                                 <ul>
@@ -80,11 +89,15 @@ function Footer() {
                                 </Button>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
-            <div>
+            <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}>
                 {/* Gradient top border */}
                 <div className="h-[1.5px] w-full bg-gradient-to-r from-[#FFFFFF] via-[#727272] to-[#FFFFFF]" />
 
@@ -94,8 +107,8 @@ function Footer() {
                         Copyright {year} ceramicsolutions.com all rights reserved
                     </p>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </div >
     )
 }
 

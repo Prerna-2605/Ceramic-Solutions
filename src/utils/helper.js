@@ -47,8 +47,8 @@ export const nav = [
         link: '/contact us'
     },
     {
-        name: 'request a quote',
-        link: '/request a quote'
+        name: 'FAQ',
+        link: '/FAQ'
     },
 ];
 

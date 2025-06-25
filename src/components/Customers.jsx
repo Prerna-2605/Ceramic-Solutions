@@ -3,6 +3,7 @@ import { review, slider } from '../utils/helper'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from 'framer-motion';
 
 function Customers() {
     const settings = {
@@ -52,17 +53,36 @@ function Customers() {
     return (
         <div className='mb-[84px] overflow-hidden'>
             <div className="mx-w-[1140px] mx-auto px-3">
-                <h2 className='font-jakarta font-semibold text-[56px] text-center mb-5 '>
+                <motion.h2
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }} className='font-jakarta font-semibold text-[56px] text-center mb-5 '>
                     What Our Customers Say
-                </h2>
+                </motion.h2>
 
-                <p className='font-jakarta font-normal text-b=[18px] text-center max-w-[641px] mb-8 mx-auto '>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    viewport={{ once: true }} className='font-jakarta font-normal text-b=[18px] text-center max-w-[641px] mb-8 mx-auto '>
                     Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade
-                </p>
+                </motion.p>
 
-                <div className='flex max-w-[482px] justify-between mx-auto '>
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={{
+                        visible: { transition: { staggerChildren: 0.2 } },
+                    }} className='flex max-w-[482px] justify-between mx-auto '>
                     {review.map((items, index) => (
-                        <div key={index} className='flex gap-[10.67px] pt-[8.33px] pb-[6px] pl-4 pr-[45.5px] bg-white rounded-[16px] items-center border border-[#DCDCDC] '>
+                        <motion.div
+                            variants={{
+                                hidden: { opacity: 0, y: 20 },
+                                visible: { opacity: 1, y: 0 },
+                            }}
+                            transition={{ duration: 0.4 }} key={index} className='flex gap-[10.67px] pt-[8.33px] pb-[6px] pl-4 pr-[45.5px] bg-white rounded-[16px] items-center border border-[#DCDCDC] '>
                             <a href="">
                                 <img src={items.icon} alt="google" className='size-10' />
                             </a>
@@ -83,14 +103,18 @@ function Customers() {
                                     {items.reviews}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
 
             <Slider {...settings}>
                 {slider.map((items, index) => (
-                    <div key={index} className='max-w-[365px] p-6 rounded-[24px] shadow-2 my-[56px] '>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4 }}
+                        viewport={{ once: true }} key={index} className='max-w-[365px] p-6 rounded-[24px] shadow-2 my-[56px] '>
                         <div className='flex items-center gap-2 '>
                             <img src={items.profile} alt="profile" />
 
@@ -110,10 +134,10 @@ function Customers() {
                         <p className='font-manrope font-normal text-base leading-[160%] '>
                             "{items.comment}"
                         </p>
-                    </div>
+                    </motion.div>
                 ))}
             </Slider>
-        </div>
+        </div >
     )
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { quest } from '../utils/helper'
+import { AnimatePresence, motion } from 'framer-motion';
 
 function Questions() {
     const [isOpen, setIsOpen] = useState(null);
@@ -16,18 +17,33 @@ function Questions() {
 
                 <div className='max-w-[912px] mx-auto -px-3  '>
                     {quest.map((items, index) => (
-                        <div key={index} className={`py-[21px] px-5 shadow-2 mb-6 rounded-2xl ${isOpen === index ? '' : ''} `}>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.4, ease: 'easeOut' }}
+                            viewport={{ once: true }} key={index} className={`py-[21px] px-5 shadow-2 mb-6 rounded-2xl ${isOpen === index ? '' : ''} `}>
                             <button onClick={() => setIsOpen(isOpen === index ? null : index)} className={`flex justify-between items-center font-jakarta font-normal text-[18px] w-full cursor-pointer transition-[height] duration-250 ${isOpen === index ? 'mb-[14px] ' : 'h-full overflow-hidden'} `}>
                                 {items.ques}
                                 <span className={`${isOpen === index ? 'rotate-180' : ''}`}><items.arrow /></span>
                             </button>
-                            <p className={`font-jakarta font-normal text-base transition-[max-height] duration-250 ${isOpen === index ? ' max-h-[200px] ' : 'max-h-0 overflow-auto absolute -top-full'} `}>
-                            Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade
-                        </p>
-                        </div>
+                            <AnimatePresence initial={false}>
+                                {isOpen === index && (
+                                    <motion.p
+                                        key="content"
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: "auto" }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        transition={{ duration: 0.15 }}
+                                        className="font-jakarta font-normal text-base overflow-hidden"
+                                    >
+                                        {items.ans}
+                                    </motion.p>
+                                )}
+                            </AnimatePresence>
+                        </motion.div>
                     ))}
+                </div>
             </div>
-        </div>
         </div >
     )
 }
