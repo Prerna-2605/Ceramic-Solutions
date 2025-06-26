@@ -38,7 +38,7 @@ function ChooseUs() {
                                         visible: { opacity: 1, y: 0 }
                                     }}
                                     transition={{ duration: 0.5 }} key={index} className='flex gap-5 '>
-                                    <div className='size-[62px] bg-[#F8D4D4] rounded-[10px] flex items-center justify-center '>
+                                    <div className='size-[62px] max-w-[62px] w-full bg-[#F8D4D4] rounded-[10px] flex items-center justify-center '>
                                         <items.icon />
                                     </div>
 

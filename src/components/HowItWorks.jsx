@@ -66,8 +66,8 @@ function HowItWorks() {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-                            viewport={{ once: true }} className='flex gap-6 '>
-                            <Button className={`bg-[#FF0000] py-4 px-8 max-[475px]:flex-col `}>
+                            viewport={{ once: true }} className='flex gap-6  max-[475px]:flex-col'>
+                            <Button className={`bg-[#FF0000] py-4 px-8 `}>
                                 get a quote
                             </Button>
                             <Button className={`border border-[#FF0000] py-4 px-8 !text-[#FF0000] `}>

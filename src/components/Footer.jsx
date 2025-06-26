@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 function Footer() {
     const year = new Date().getFullYear();
     return (
-        <div>
+        <div className='overflow-hidden'>
             <div className="max-w-[1140px] mx-auto px-3">
                 <div className='flex justify-between gap-15 mb-[45px] max-[992px]:flex-wrap '>
                     <motion.div
