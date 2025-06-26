@@ -10,7 +10,7 @@ function Footer() {
     return (
         <div>
             <div className="max-w-[1140px] mx-auto px-3">
-                <div className='flex justify-between gap-15 mb-[45px] '>
+                <div className='flex justify-between gap-15 mb-[45px] max-[992px]:flex-wrap '>
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -49,7 +49,7 @@ function Footer() {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        viewport={{ once: true }} className="max-w-[832px] justify-between flex w-full">
+                        viewport={{ once: true }} className="max-w-[832px] justify-between flex w-full max-[710px]:grid max-[710px]:grid-cols-2 max-[710px]:gap-6 max-[710px]:max-w-[710px] ">
                         {footerLinks.map((items, index) => (
                             <div key={index}>
                                 <ul>
@@ -78,13 +78,13 @@ function Footer() {
                                 Stay Up To Date
                             </p>
 
-                            <div className='relative'>
+                            <div className='relative flex max-[615px]:flex-col max-[625px]:gap-2'>
                                 <input
                                     type="email"
                                     placeholder="Your email"
-                                    className='w-[340px] h-[74px] border border-[#D9D9D9] pl-6 pr-[180px] rounded-full '
+                                    className='max-w-[340px] w-full h-[74px] max-[710px]:h-[54px] border border-[#D9D9D9] pl-6 pr-[180px] rounded-full max-[710px]:pr-[152px] max-[710px]:pl-4 max-[615px]:pr-4 '
                                 />
-                                <Button className={`bg-[#FF0000] !font-semibold !text-base py-4 px-10 absolute right-[10px] top-[9px] `}>
+                                <Button className={`bg-[#FF0000] !font-semibold !text-base py-4 px-10 min-[615px]:absolute right-[10px] top-[9px] max-[710px]:top-[5px] max-[710px]:right-[5px] max-[710px]:py-[10px] max-[710px]:px-8  `}>
                                     Subscribe
                                 </Button>
                             </div>

@@ -1,21 +1,25 @@
 import React, { useState } from 'react'
 import { quest } from '../utils/helper'
 import { AnimatePresence, motion } from 'framer-motion';
+import Heading from './common/Heading';
+import Subheading from './common/Subheading';
 
 function Questions() {
     const [isOpen, setIsOpen] = useState(null);
     return (
         <div className='mb-[134px] '>
             <div className="max-w-[1140px] mx-auto px-3">
-                <h2 className='font-jakarta font-semibold text-[56px] leading-[100%] text-center mb-5 '>
-                    Frequently Asked Questions
-                </h2>
+                <Heading headingText={'Frequently Asked Questions'} className='text-center !mb-5' initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                    viewport={{ once: true }} />
+                
+                <Subheading className='text-center max-w-[592px] mx-auto mb-[56px] ' initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
+                viewport={{ once: true }} />
 
-                <p className='font-jakarta font-normal text-[18px] text-center max-w-[592px] mx-auto mb-[56px] '>
-                    Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade
-                </p>
-
-                <div className='max-w-[912px] mx-auto -px-3  '>
+                <div className='max-w-[912px] mx-auto max-[936px]:mx-3  '>
                     {quest.map((items, index) => (
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

@@ -3,28 +3,24 @@ import section2img from '../assets/png/section2.png'
 import { whyUs } from '../utils/helper'
 import Button from './common/Button'
 import { motion } from 'framer-motion'
+import Heading from './common/Heading'
+import Subheading from './common/Subheading'
 
 function ChooseUs() {
     return (
         <div className='bg-[#FFEBEB] mb-[140px] py-[100px] '>
             <div className="max-w-[1140px] mx-auto px-3">
-                <div className="flex flex-wrap items-center">
-                    <div className="w-1/2">
-                        <motion.h2
-                            initial={{ opacity: 0, x: -40 }}
+                <div className="flex flex-wrap items-center max-md:flex-col-reverse max-md:gap-10 ">
+                    <div className="w-1/2 max-md:w-full ">
+                        <Heading headingText={'Why Choose Us?'} className='!mb-5' initial={{ opacity: 0, x: -40 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
-                            viewport={{ once: true }} className='font-jakarta font-semibold text-[56px] mb-5 '>
-                            Why Choose us?
-                        </motion.h2>
+                            viewport={{ once: true }}/>
 
-                        <motion.p
-                            initial={{ opacity: 0, x: -30 }}
+                        <Subheading className='mb-8' initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            viewport={{ once: true }} className='font-jakarta font-normal text-[18px] leading-[160%] mb-8 '>
-                            Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt.
-                        </motion.p>
+                            viewport={{ once: true }} />
 
                         <motion.div
                             initial="hidden"
@@ -46,7 +42,7 @@ function ChooseUs() {
                                         <items.icon />
                                     </div>
 
-                                    <div className='max-w-[370px]'>
+                                    <div className='min-md:max-w-[370px]'>
                                         <h3 className='font-jakarta font-semibold text-[20px] leading-[160%] mb-3 '>
                                             {items.heading}
                                         </h3>
@@ -70,12 +66,12 @@ function ChooseUs() {
                         </motion.div>
                     </div>
 
-                    <div className="w-1/2">
+                    <div className="w-1/2 max-md:w-full ">
                         <motion.img
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.6 }}
-                            viewport={{ once: true }} src={section2img} alt="image" />
+                            viewport={{ once: true }} src={section2img} alt="image" className='mx-auto' />
                     </div>
                 </div>
             </div>

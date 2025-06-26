@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from 'framer-motion';
+import Heading from './common/Heading';
+import Subheading from './common/Subheading';
 
 function Customers() {
     const settings = {
@@ -39,11 +41,11 @@ function Customers() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1.5,
+                    slidesToShow: 1.75,
                 }
             },
             {
-                breakpoint: 572,
+                breakpoint: 642,
                 settings: {
                     slidesToShow: 1,
                 }
@@ -53,21 +55,15 @@ function Customers() {
     return (
         <div className='mb-[84px] overflow-hidden'>
             <div className="mx-w-[1140px] mx-auto px-3">
-                <motion.h2
-                    initial={{ opacity: 0, y: 30 }}
+                <Heading headingText={'What Our Customers Say'} className='text-center !mb-5' initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    viewport={{ once: true }} className='font-jakarta font-semibold text-[56px] text-center mb-5 '>
-                    What Our Customers Say
-                </motion.h2>
+                    viewport={{ once: true }} />
 
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
+                <Subheading className='text-center max-w-[641px] mx-auto mb-8' initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    viewport={{ once: true }} className='font-jakarta font-normal text-b=[18px] text-center max-w-[641px] mb-8 mx-auto '>
-                    Lörem ipsum koda astrobel: sutaveligen. Rodod bänera viliga. Pregigt primasofi dede facebooka: förutom tivaligt. Fejkade
-                </motion.p>
+                    viewport={{ once: true }} />
 
                 <motion.div
                     initial="hidden"
@@ -75,7 +71,7 @@ function Customers() {
                     viewport={{ once: true }}
                     variants={{
                         visible: { transition: { staggerChildren: 0.2 } },
-                    }} className='flex max-w-[482px] justify-between mx-auto '>
+                    }} className='flex max-w-[482px] justify-between mx-auto max-[495px]:flex-col max-[495px]:gap-5 max-[495px]:max-w-[230px] w-full '>
                     {review.map((items, index) => (
                         <motion.div
                             variants={{
@@ -99,7 +95,7 @@ function Customers() {
                                     <img src={items.star} alt="stars" className='max-w[83.55px] w-full ' />
                                 </div>
 
-                                <p className='font-manrope font-normal text-[12px] leading-[160%] '>
+                                <p className='font-manrope font-normal text-[12px] leading-[160%] whitespace-nowrap '>
                                     {items.reviews}
                                 </p>
                             </div>
@@ -114,7 +110,7 @@ function Customers() {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4 }}
-                        viewport={{ once: true }} key={index} className='max-w-[365px] p-6 rounded-[24px] shadow-2 my-[56px] '>
+                        viewport={{ once: true }} key={index} className='p-6 rounded-3xl shadow-2 my-[56px] '>
                         <div className='flex items-center gap-2 '>
                             <img src={items.profile} alt="profile" />
 

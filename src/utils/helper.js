@@ -47,8 +47,8 @@ export const nav = [
         link: '/contact us'
     },
     {
-        name: 'FAQ',
-        link: '/FAQ'
+        name: 'request a quote',
+        link: '/request a quote'
     },
 ];
 
@@ -252,7 +252,11 @@ export const services = [
     },
 ];
 
-export const repeatedServices = Array(6).fill(services).flat();
+export const repeatedServices = [
+    ...Array(6).fill(services).flat(), // 18 items
+    { location: LOCATION, name: "Knoxville" },
+    { location: LOCATION, name: "Sevierville" }, // now total 20 items
+];
 
 export const icons = [
     {

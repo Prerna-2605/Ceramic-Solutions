@@ -56,14 +56,17 @@ function Navbar() {
                 </motion.ul>
 
                 <div className='flex gap-5 items-center'>
-                    <Button className={'bg-[#FF0000] gap-[10px] py-[14px] px-5 flex '}>
+                    <Button className={'bg-[#FF0000] gap-[10px] py-[14px] px-5 flex max-md:hidden '}>
                         <PHONE />
                         (865) 621-1717
                     </Button>
-                    <button onClick={() => setIsOpen(state === "show" ? null : "show")} className={'capitalize rounded-[56px] font-jakarta font-bold text-[18px] whitespace-nowrap text-white cursor-pointer transition-transform duration-200 active:scale-95 flex flex-col justify-between w-[35px] h-[30px] z-15 min-[981px]:hidden relative '}>
-                        <span className={`absolute w-full h-1 bg-[#FF0000] rounded-[50px] transition-all duration-300 ease-in-out ${state === "show" ? 'rotate-45 top-1/2' : 'top-0 rotate-0'}`}></span>
-                        <span className={`absolute w-full h-1 bg-[#FF0000] rounded-[50px] transition-all duration-300 ease-in-out ${state === "show" ? 'opacity-0' : 'top-1/2 opacity-100'}`}></span>
-                        <span className={`absolute w-full h-1 bg-[#FF0000] rounded-[50px] transition-all duration-300 ease-in-out ${state === "show" ? '-rotate-45 top-1/2' : 'bottom-0 rotate-0'}`}></span>
+                    <Button className={'bg-[#FF0000] gap-[10px] p-[14px] flex min-md:hidden max-[425px]:p-[10px] '}>
+                        <PHONE />
+                    </Button>
+                    <button onClick={() => setIsOpen(state === "show" ? null : "show")} className={'cursor-pointer active:scale-95 flex flex-col justify-between w-[38px] h-[31px] z-15 min-[981px]:hidden '}>
+                        <span className={`w-full h-1 bg-[#FF0000] rounded-[50px] transition-all duration-300 ease-in-out ${state === "show" ? 'rotate-45 origin-left ' : 'rotate-0'}`}></span>
+                        <span className={`w-full h-1 bg-[#FF0000] rounded-[50px] transition-all duration-300 ease-in-out ${state === "show" ? 'opacity-0' : 'opacity-100'}`}></span>
+                        <span className={`w-full h-1 bg-[#FF0000] rounded-[50px] transition-all duration-300 ease-in-out ${state === "show" ? '-rotate-45 origin-left ' : 'rotate-0'}`}></span>
                     </button>
                 </div>
             </div>
